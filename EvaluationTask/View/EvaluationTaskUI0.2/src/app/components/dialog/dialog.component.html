@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Add </h1>
+<form [formGroup] ="form" (ngSubmit)="onSavePressed()">
+<div mat-dialog-content class="content" *ngFor="let entity of skeleton"> 
+  
+    <mat-form-field appearance="outline" *ngIf="entity.key!=='id'">
+      <mat-label>{{entity.label}}</mat-label>
+      <input matInput  type={{entity.type}} formControlName={{entity.key}} >
+    </mat-form-field>
+    
+  
+ 
+        
+      
+</div>
+<div mat-dialog-actions class="action">
+  <button mat-raised-button (click) = 'onCancelPressed()'>Cancel</button>
+  <button mat-raised-button color="primary" type="submit">Save</button>
+</div>
+</form>

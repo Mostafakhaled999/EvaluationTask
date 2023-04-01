@@ -1,0 +1,9 @@
+<mat-tab-group mat-align-tabs="center" animationDuration="200ms">
+    <mat-tab label="Shipment">
+        <app-data-table  [service]="shipmentService" [columnSchema] = "shipmentSchema" label = "Shipment" [dialogBuilder] = 'shipmentDialogSchema'> </app-data-table>
+    </mat-tab>
+    <mat-tab label="Boxes">
+        <app-data-table [service]="shipmentService" [columnSchema] = "boxesSchema" label = 'Boxes'[dialogBuilder] = 'shipmentDialogSchema'> </app-data-table>
+    </mat-tab>
+</mat-tab-group>
+
